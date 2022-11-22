@@ -3,7 +3,7 @@ import { sequelize } from '../config/database';
 
 class UserModel extends Model {}
 
-UserModel.init(
+export default UserModel.init(
   {
     id: {
       type: DataTypes.INTEGER,

@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import { getUserList } from './database/controllers/UserController';
 
 const routes = Router();
 
-routes.get('/', (_req, res) => {
-  return res.send({ message: 'Get method!' });
+routes.get('/', (req, res) => {
+  getUserList(req, res);
 });
 
 routes.post('/', (_req, res) => {
